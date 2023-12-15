@@ -1,0 +1,60 @@
+Car-Pooling Platform
+- Overview
+This is a car-pooling platform built with microservices using Go and a MySQL database. The platform connects passengers with car owners for shared travel.
+
+- Features
+1. User Management
+Create User: Register and provide personal details.
+Update User: Modify user information.
+Delete User: Remove the account after one year of inactivity.
+
+2. Trip Management
+Publish Trip: Car owners can create and post trip details.
+Enroll in Trip: Passengers can join available trips.
+Cancel Trip: Car owners can cancel trips before the scheduled time.
+
+3. Console Application
+Console Interface: Simulates the frontend for interacting with microservices.
+API Integration: Utilizes APIs to perform actions within the platform.
+Setup
+Database Configuration: Set up a MySQL database and update connection details in the code.
+Initialize Database: Run initialization scripts for users and trips.
+
+4. Running Services
+User Microservice: Execute the user microservice.
+Trip Microservice: Launch the trip microservice.
+
+5. API Endpoints
+User Microservice:
+Create, read, update, and delete user profiles.
+Trip Microservice:
+Manage trip publication, enrollment, cancellation, and retrieval.
+
+
+- Design Considerations
+
+- Microservices Architecture
+The application follows a microservices architecture for better scalability, maintainability, and flexibility. Key design considerations include:
+
+1. Service Decoupling: Each microservice (users, trips) handles specific functionalities independently, promoting loose coupling.
+2. Data Consistency: Ensuring consistency across microservices using eventual consistency patterns and transactional mechanisms.
+3. API Gateway: A central entry point for clients to access different microservices via a single interface.
+
+- Database Design
+1. User Service Database: Stores user-related information such as profiles, contact details, and ownership status.
+2. Trip Service Database: Manages trip-related data, including trip details, available seats, and enrolled passengers.
+
+
+- The architecture consists of the following components:
+
+1. API Gateway: Accepts incoming requests and routes them to the respective microservices.
+2. User Service: Manages user-related operations like user creation, update, retrieval, and deletion.
+3. Trip Service: Handles trip-related functionalities such as publishing trips, enrolling users, and trip retrieval.
+4. Databases: Separate databases for user and trip services to maintain data isolation and manage specific domain data.
+
+- How it works:
+Supposed to be ran via the console.go where it will take user inputs and react accordingly however due to time constraint i am unable to
+get the program to display anything.
+
+- Setup:
+Run the database that comes with the file, however still has connection issues that are not debugged finished.
